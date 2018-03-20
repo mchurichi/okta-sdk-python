@@ -96,7 +96,7 @@ class UsersClient(ApiClient):
         response = ApiClient.post_path(self, '/{0}'.format(uid), user)
         return Utils.deserialize(response.text, User)
 
-    def create_user(self, user, activate=None):
+    def create_user(self, user, activate=None, provider=None):
         """Create a user
 
         :param user: the data to create a user
